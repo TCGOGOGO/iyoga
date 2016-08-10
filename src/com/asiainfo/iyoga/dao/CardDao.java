@@ -24,7 +24,8 @@ public class CardDao {
     public static void  writeToMysql(String name, Card card) throws SQLException, IOException {
         logger.info("writeToMysql start");
         mysqlCode = "insert into card(type, startTime, endTime, times) values(?,?,?,?)";
-        conn = MysqlConnect.getConnet();
+        if(conn == null)
+            conn = MysqlConnect.getConnet();
         try (PreparedStatement ps = conn.prepareStatement(mysqlCode)) {
             ps.setString(1, card.getType());
             ps.setString(2, card.getStartTime());
@@ -57,7 +58,8 @@ public class CardDao {
 
     public static boolean findMember(String name) throws IOException {
         logger.info("findMember start");
-        conn = MysqlConnect.getConnet();
+        if(conn == null)
+            conn = MysqlConnect.getConnet();
         mysqlCode = "select *from member where name = " + "\"" + name + "\"";
         try (PreparedStatement ps = conn.prepareStatement(mysqlCode)) {
             ResultSet rs = ps.executeQuery();

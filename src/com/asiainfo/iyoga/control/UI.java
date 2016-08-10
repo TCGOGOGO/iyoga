@@ -5,10 +5,7 @@ import com.asiainfo.iyoga.bean.Member;
 import com.asiainfo.iyoga.serviceImpl.CardServiceImpl;
 import com.asiainfo.iyoga.serviceImpl.MemberServiceImpl;
 import com.asiainfo.iyoga.serviceImpl.OpenServiceImpl;
-import com.mysql.jdbc.log.Log;
-import com.mysql.jdbc.log.LogFactory;
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

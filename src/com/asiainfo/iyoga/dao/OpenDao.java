@@ -18,7 +18,8 @@ public class OpenDao {
 
     public static void writeToMysql(String name) throws SQLException, IOException {
         logger.info("writeToMysql start");
-        conn = MysqlConnect.getConnet();
+        if(conn == null)
+            conn = MysqlConnect.getConnet();
         statement = conn.createStatement();
         String mysqlCode = "select id from member where name = " + "\"" + name + "\"";
         resultSet = statement.executeQuery(mysqlCode);

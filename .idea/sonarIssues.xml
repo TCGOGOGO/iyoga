@@ -188,6 +188,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/test/CardDaoTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/test/MemberDaoTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/test/MysqlConnectTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/test/OpenDaoTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/test/Test.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/mysql/DBconnect.java">
           <value>
             <set />

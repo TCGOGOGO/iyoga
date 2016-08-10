@@ -24,7 +24,8 @@ public class MemberDao {
     public static void writeToMysql(Member member) throws SQLException, IOException {
         logger.info("writeToMysql start");
         mysqlCode = "insert into member(name, address, job) values(?,?,?)";
-        conn = MysqlConnect.getConnet();
+        if(conn == null)
+            conn = MysqlConnect.getConnet();
         try (PreparedStatement ps = conn.prepareStatement(mysqlCode)) {
             ps.setString(1, member.getName());
             ps.setString(2, member.getAddress());
@@ -52,7 +53,8 @@ public class MemberDao {
 
     public static boolean findDuplicate(String name) throws IOException, SQLException {
         logger.info("findDuplicate start");
-        conn = MysqlConnect.getConnet();
+        if(conn == null)
+            conn = MysqlConnect.getConnet();
         mysqlCode = "select *from member where name = " + "\"" + name + "\"";
         try (PreparedStatement ps = conn.prepareStatement(mysqlCode)) {
             ResultSet rs = ps.executeQuery();
