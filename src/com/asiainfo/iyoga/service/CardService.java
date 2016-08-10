@@ -1,7 +1,6 @@
 package com.asiainfo.iyoga.service;
 
 import com.asiainfo.iyoga.bean.Card;
-
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -11,5 +10,6 @@ import java.sql.SQLException;
 
 public interface CardService {
     public boolean findMemberName(String name) throws IOException;
+
     public void writeToCard(String name, Card card) throws SQLException, IOException;
 }

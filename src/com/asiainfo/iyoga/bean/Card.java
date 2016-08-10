@@ -1,8 +1,5 @@
 package com.asiainfo.iyoga.bean;
 
-
-import java.sql.*;
-
 /**
  * Created by tcgogogo on 16/8/9.
  */

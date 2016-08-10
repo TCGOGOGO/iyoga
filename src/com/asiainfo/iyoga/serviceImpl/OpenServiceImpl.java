@@ -2,7 +2,6 @@ package com.asiainfo.iyoga.serviceImpl;
 
 import com.asiainfo.iyoga.dao.OpenDao;
 import com.asiainfo.iyoga.service.OpenService;
-
 import java.io.IOException;
 import java.sql.SQLException;
 

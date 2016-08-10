@@ -1,0 +1,12 @@
+2016-08-11 00:34:10 com.asiainfo.iyoga.control.UI.show(UI.java:35) UI.java INFO show start
+2016-08-11 00:34:12 com.asiainfo.iyoga.control.UI.show(UI.java:200) UI.java INFO show end
+2016-08-11 00:34:16 com.asiainfo.iyoga.dao.MemberDao.findDuplicate(MemberDao.java:55) MemberDao.java INFO findDuplicate start
+2016-08-11 00:34:18 com.asiainfo.iyoga.dao.MemberDao.findDuplicate(MemberDao.java:62) MemberDao.java INFO findDuplicate end
+2016-08-11 00:34:18 com.asiainfo.iyoga.control.UI$3.actionPerformed(UI.java:149) UI.java DEBUG 写入数据库失败,会员已存在
+2016-08-11 00:36:19 com.asiainfo.iyoga.control.UI.show(UI.java:35) UI.java INFO show start
+2016-08-11 00:36:21 com.asiainfo.iyoga.control.UI.show(UI.java:200) UI.java INFO show end
+2016-08-11 00:36:58 com.asiainfo.iyoga.control.UI.show(UI.java:35) UI.java INFO show start
+2016-08-11 00:36:59 com.asiainfo.iyoga.control.UI.show(UI.java:200) UI.java INFO show end
+2016-08-11 00:37:02 com.asiainfo.iyoga.dao.MemberDao.findDuplicate(MemberDao.java:55) MemberDao.java INFO findDuplicate start
+2016-08-11 00:37:03 com.asiainfo.iyoga.dao.MemberDao.findDuplicate(MemberDao.java:62) MemberDao.java INFO findDuplicate end
+2016-08-11 00:37:03 com.asiainfo.iyoga.control.UI$3.actionPerformed(UI.java:149) UI.java DEBUG 写入数据库失败,会员已存在

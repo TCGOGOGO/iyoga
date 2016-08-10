@@ -88,6 +88,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/common/changeIdFormat.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/asiainfo/iyoga/control/Demo.java">
           <value>
             <set />
@@ -214,6 +219,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/com/mysql/DBconnect.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/log/logInfo.log">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/log4j.properties">
           <value>
             <set />
           </value>

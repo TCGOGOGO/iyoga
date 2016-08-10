@@ -6,7 +6,6 @@ import com.asiainfo.iyoga.serviceImpl.CardServiceImpl;
 import com.asiainfo.iyoga.serviceImpl.MemberServiceImpl;
 import com.asiainfo.iyoga.serviceImpl.OpenServiceImpl;
 import org.apache.log4j.Logger;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +26,7 @@ public class UI {
     private static String endTime;
     private static int times;
     private static String userOption = "";
-    private static String cardOption = "";
-
+    private static String cardType = "";
     private static Logger logger = Logger.getLogger(UI.class);
 
     public static void show() throws SQLException {
@@ -85,21 +83,21 @@ public class UI {
         timesCardButton.setBounds(150, 180, 60, 25);
         frame.add(timesCardButton);
 
-        JTextField dataTextTimes = new JTextField();
-        dataTextTimes.setBounds(210, 180, 60, 25);
-        frame.add(dataTextTimes);
+        JTextField addCardTimesText = new JTextField();
+        addCardTimesText.setBounds(210, 180, 60, 25);
+        frame.add(addCardTimesText);
 
-        ButtonGroup buttonGroup1 = new ButtonGroup();
-        buttonGroup1.add(addMemberButton);
-        buttonGroup1.add(addCardButton);
+        ButtonGroup buttonGroupUserOption = new ButtonGroup();
+        buttonGroupUserOption.add(addMemberButton);
+        buttonGroupUserOption.add(addCardButton);
 
-        ButtonGroup buttonGroup2 = new ButtonGroup();
-        buttonGroup2.add(yearCardButton);
-        buttonGroup2.add(timesCardButton);
+        ButtonGroup buttonGroupCardType = new ButtonGroup();
+        buttonGroupCardType.add(yearCardButton);
+        buttonGroupCardType.add(timesCardButton);
 
-        JButton buttonSubmit = new JButton("提交");
-        buttonSubmit.setBounds(170, 240, 80, 50);
-        frame.add(buttonSubmit);
+        JButton submitButton = new JButton("提交");
+        submitButton.setBounds(170, 240, 80, 50);
+        frame.add(submitButton);
 
         frame.setVisible(true);
 
@@ -121,21 +119,21 @@ public class UI {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             if(yearCardButton.isSelected())
-                                cardOption = "年卡";
+                                cardType = "年卡";
                         }
                     });
                     timesCardButton.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             if(timesCardButton.isSelected())
-                                cardOption = "次卡";
+                                cardType = "次卡";
                         }
                     });
                 }
             }
         });
 
-        buttonSubmit.addActionListener(new ActionListener() {
+        submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if("添加会员".equals(userOption)) {
@@ -152,10 +150,8 @@ public class UI {
                         else {
                             memberService.writeToMember(member);
                         }
-                    } catch (SQLException e1) {
-                        e1.printStackTrace();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
+                    } catch (SQLException | IOException e1) {
+                        logger.debug(e1);
                     }
                 }
 
@@ -164,16 +160,18 @@ public class UI {
                     Calendar c = Calendar.getInstance();
                     SimpleDateFormat current = new SimpleDateFormat("yyyy-MM-dd");
                     startTime = current.format(c.getTime());
-                    if("年卡".equals(cardOption)) {
+                    if("年卡".equals(cardType)) {
+                        //在原先基础上加上一年
                         c.add(Calendar.YEAR, 1);
                         endTime = current.format(c.getTime());
                         times = 0;
                         type = "年卡";
                     }
-                    if("次卡".equals(cardOption)) {
+                    if("次卡".equals(cardType)) {
+                        //在原先基础上加上三年
                         c.add(Calendar.YEAR, 3);
                         endTime = current.format(c.getTime());
-                        times = Integer.parseInt(dataTextTimes.getText().trim());
+                        times = Integer.parseInt(addCardTimesText.getText().trim());
                         type = "次卡";
                     }
 
@@ -189,10 +187,8 @@ public class UI {
                             logger.debug("写入数据库失败,会员不存在");
                             System.out.println("该会员不存在");
                         }
-                    } catch (SQLException e1) {
-                        e1.printStackTrace();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
+                    } catch (SQLException | IOException e1) {
+                        logger.debug(e1);
                     }
                 }
             }

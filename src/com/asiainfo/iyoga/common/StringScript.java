@@ -5,8 +5,8 @@ package com.asiainfo.iyoga.common;
  */
 public class StringScript {
 
-    public static String changeFormat(int number) {
-        StringBuffer result = new StringBuffer();
+    public static String changeIdFormat(int number) {
+        StringBuilder result = new StringBuilder();
         if(number < 10) {
             result.append("00").append(String.valueOf(number));
         }

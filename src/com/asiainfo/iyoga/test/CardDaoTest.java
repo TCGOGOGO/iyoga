@@ -3,7 +3,6 @@ package com.asiainfo.iyoga.test;
 import com.asiainfo.iyoga.bean.Card;
 import com.asiainfo.iyoga.dao.CardDao;
 import org.junit.Test;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import static org.junit.Assert.*;
