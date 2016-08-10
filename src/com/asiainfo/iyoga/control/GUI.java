@@ -14,10 +14,11 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+
 /**
  * Created by tcgogogo on 16/8/10.
  */
-public class UI {
+public class GUI {
     private static String name;
     private static String address;
     private static String job;
@@ -27,7 +28,7 @@ public class UI {
     private static int times;
     private static String userOption = "";
     private static String cardType = "";
-    private static Logger logger = Logger.getLogger(UI.class);
+    private static Logger logger = Logger.getLogger(GUI.class);
 
     public static void show() throws SQLException {
         logger.info("show start");

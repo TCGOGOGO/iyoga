@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DemoTest {
 
     public static void main(String[] args) throws SQLException {
-        UI ui = new UI();
-        ui.show();
+        GUI gui = new GUI();
+        gui.show();
     }
 }

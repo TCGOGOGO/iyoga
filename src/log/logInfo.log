@@ -35,3 +35,5 @@
 2016-08-11 01:56:47 com.asiainfo.iyoga.dao.CardDao.writeToMysql(CardDao.java:57) CardDao.java INFO writeToMysql end
 2016-08-11 01:56:47 com.asiainfo.iyoga.dao.OpenDao.writeToMysql(OpenDao.java:19) OpenDao.java INFO writeToMysql start
 2016-08-11 01:56:47 com.asiainfo.iyoga.dao.OpenDao.writeToMysql(OpenDao.java:48) OpenDao.java INFO writeToMysql end
+2016-08-11 02:27:54 com.asiainfo.iyoga.control.GUI.show(GUI.java:34) GUI.java INFO show start
+2016-08-11 02:27:56 com.asiainfo.iyoga.control.GUI.show(GUI.java:197) GUI.java INFO show end
