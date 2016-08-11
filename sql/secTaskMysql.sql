@@ -19,7 +19,7 @@ create table memberCourseCoach (id int primary key auto_increment,	#会员课程
 	member_id int,				#选课会员id 外键
 	course_id int,				#所选课程id 外键
 	coach_id int,				#课程教练id 外键
-	learn_time datetime,
+	learn_time datetime,		#课程开始时间
 	foreign key(member_id) references member(id) on delete cascade,	
 	foreign key(course_id) references course(id) on delete cascade,
 	foreign key(coach_id) references coach(id) on delete cascade
