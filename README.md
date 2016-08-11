@@ -5,7 +5,9 @@
 - lib目录下存放项目的一些依赖包
 - config.properties包含数据库连接时的配置参数
 - log4j.properties包含对日志方法的一些配置
-- firTaskMysql.sql是任务1的数据库建表语句
+- sql目录下 
+	- firTaskMysql.sql是任务1的数据库建表语句
+	- secTaskMysql.sql是任务2的数据库建表语句
 - src目录下
 	- log中存放日志文件
 	- /com/asiainfo/iyoga
